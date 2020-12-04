@@ -14,7 +14,7 @@ class AddPersonToTasklist extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->string('person');
+            
         });
     }
 
