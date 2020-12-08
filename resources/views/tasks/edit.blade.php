@@ -8,6 +8,7 @@
                 <div class="form-group">
                     {!! Form::label('content','タスク') !!}
                     {!! Form::text('content',null,['class'=>'form-control']) !!}
+                
                     {!! Form::label('person','担当者') !!}
                     {!! Form::text('person',null,['class'=>'form-control']) !!}
                     {!! Form::label('status','ステータス') !!}
