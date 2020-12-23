@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
 <h1>{{$task->content}}の詳細</h1>

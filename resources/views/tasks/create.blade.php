@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
 <h1>タスク作成</h1>
