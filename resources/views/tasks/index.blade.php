@@ -8,9 +8,7 @@
                 <tr>
                     <th>作成日</th>
                     <th>id</th>
-                    <th>担当者</th>
                     <th>タスク</th>
-                    <th>ステータス</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,9 +16,7 @@
                 <tr>
                     <td>{{$task->created_at}}</td>
                     <td>{!! link_to_route('tasks.show',$task->id,['task'=>$task->id]) !!}</td>
-                    <td>{{$task->person}}</td>
                     <td>{{$task->content}}</td>
-                    <td>{{$task->status}}</td>
                 </tr>
                 @endforeach
             </tbody>
