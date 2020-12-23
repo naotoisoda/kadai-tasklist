@@ -51,10 +51,11 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['content'=>'required|max:255']);
+        $request->validate(['content'=>'required|max:255','status'=>'required|max:10']);
         
         $request->user()->tasks()->create([
             'content'=>$request->content,
+            'status'=>$request->status,
             ]);
         
         return redirect('/');
@@ -100,10 +101,11 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate(['content'=>'required|max:255']);
+        $request->validate(['content'=>'required|max:255','status'=>'required|max:10']);
         
         $task=Task::findOrFail($id);
         $task->content=$request->content;
+        $task->status=$request->status;
         $task->save();
         return redirect('/');
     }
